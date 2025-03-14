@@ -1,0 +1,29 @@
+<section class="section education-section">
+  <div class="container">
+    <h2 class="section-title">Education</h2>
+    
+    <div class="education-timeline">
+      <mat-card class="education-card" *ngFor="let edu of educationList">
+        <mat-card-content>
+          <div class="education-icon">
+            <mat-icon>school</mat-icon>
+          </div>
+          
+          <div class="education-content">
+            <h3 class="degree">{{ edu.degree }}</h3>
+            <h4 class="institution">{{ edu.institution }}</h4>
+            
+            <div class="education-details">
+              <span class="year">
+                <mat-icon>calendar_today</mat-icon> {{ edu.year }}
+              </span>
+              <span class="percentage">
+                <mat-icon>grade</mat-icon> {{ edu.percentage }}
+              </span>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,22 @@
+<section class="section projects-section">
+  <div class="container">
+    <h2 class="section-title">Projects</h2>
+    
+    <div class="projects-grid">
+      <mat-card class="project-card" *ngFor="let project of projects">
+        <mat-card-header>
+          <mat-card-title>{{ project.name }}</mat-card-title>
+          <mat-card-subtitle>{{ project.duration }}</mat-card-subtitle>
+        </mat-card-header>
+        
+        <mat-card-content>
+          <ul class="project-details">
+            <li *ngFor="let detail of project.description">
+              {{ detail }}
+            </li>
+          </ul>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</section>

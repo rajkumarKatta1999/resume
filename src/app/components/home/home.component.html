@@ -1,0 +1,54 @@
+<section class="hero-section">
+  <div class="container">
+    <div class="hero-content">
+      <h1 class="animate-text">{{ personalInfo.name }}</h1>
+      <h2 class="animate-text">{{ personalInfo.title }}</h2>
+      <p class="intro animate-text">{{ personalInfo.introduction }}</p>
+      
+      <div class="cta-buttons animate-text">
+        <a mat-raised-button color="primary" routerLink="/about">About Me</a>
+        <a mat-raised-button color="accent" routerLink="/contact">Contact Me</a>
+        <a mat-raised-button color="primary" href="assets/resume/resume.pdf" target="_blank" download="Rajkumar_Katta_Resume.pdf">
+          <mat-icon>download</mat-icon> Resume
+        </a>
+      </div>
+    </div>
+    
+    <div  *ngIf="false" class="scroll-indicator" (click)="scrollToHighlights()">
+      <span>Scroll Down</span>
+      <mat-icon>keyboard_arrow_down</mat-icon>
+    </div>
+  </div>
+</section>
+
+<section class="highlights-section" #highlightsSection>
+  <div class="container">
+    <h2 class="section-title">What I Do</h2>
+    
+    <div class="highlights-grid">
+      <div class="highlight-card">
+        <div class="icon-container">
+          <mat-icon>code</mat-icon>
+        </div>
+        <h3>Web Development</h3>
+        <p>Building responsive and user-friendly web applications using modern frameworks.</p>
+      </div>
+      
+      <div class="highlight-card">
+        <div class="icon-container">
+          <mat-icon>devices</mat-icon>
+        </div>
+        <h3>Full Stack Development</h3>
+        <p>Creating end-to-end solutions with both frontend and backend expertise.</p>
+      </div>
+      
+      <div class="highlight-card">
+        <div class="icon-container">
+          <mat-icon>api</mat-icon>
+        </div>
+        <h3>API Development</h3>
+        <p>Designing and implementing RESTful APIs for seamless data exchange.</p>
+      </div>
+    </div>
+  </div>
+</section>

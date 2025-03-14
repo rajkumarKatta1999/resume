@@ -1,0 +1,111 @@
+.header-toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #3f51b5;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: #ffffff;
+  margin-right: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  
+  a {
+    margin: 0 5px;
+    color: #ffffff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    
+    &.active {
+      font-weight: bold;
+      color: #ffffff;
+      position: relative;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #ffffff;
+      }
+    }
+    
+    &:hover {
+      color: #ffffff;
+    }
+  }
+  
+  .download-btn {
+    margin-left: 10px;
+    font-weight: 500;
+    color: #ffffff;
+  }
+}
+
+.mobile-menu-btn {
+  display: none;
+  color: #ffffff;
+}
+
+// Responsive styles
+@media (max-width: 960px) {
+  .desktop-nav {
+    display: none;
+  }
+  
+  .mobile-menu-btn {
+    display: block;
+  }
+}
+
+// Animation for theme toggle
+.theme-toggle {
+  transition: transform 0.3s ease;
+  color: #ffffff;
+  
+  &:hover {
+    transform: rotate(30deg);
+  }
+}
+
+// Dark theme overrides
+:host-context(.dark-theme) {
+  .mat-toolbar {
+    background-color: #1a1a1a;
+  }
+  
+  .logo, .desktop-nav a, .theme-toggle, .mobile-menu-btn {
+    color: #ffffff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  }
+  
+  .desktop-nav a.active {
+    color: #ffffff;
+    
+    &::after {
+      background-color: #bb86fc;
+    }
+  }
+}
