@@ -4,6 +4,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { ResumeDataService } from '../../services/resume-data.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-about',
@@ -12,7 +13,8 @@ import { ResumeDataService } from '../../services/resume-data.service';
     CommonModule,
     MatCardModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    RouterModule
   ],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss'
