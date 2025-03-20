@@ -7,7 +7,7 @@
         <p><mat-icon>phone</mat-icon> {{ contact.phone }}</p>
         <p><mat-icon>location_on</mat-icon> {{ contact.location }}</p>
       </div>
-      
+
       <div class="footer-section">
         <h3>Quick Links</h3>
         <ul>
@@ -20,14 +20,22 @@
           <li><a routerLink="/contact">Contact</a></li>
         </ul>
       </div>
-      
+
       <div class="footer-section">
         <h3>Connect</h3>
         <div class="social-links">
-          <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">
+          <a
+            href="https://www.linkedin.com/in/rajkumar-katta-6a6234216/"
+            target="_blank"
+            aria-label="LinkedIn"
+          >
             <mat-icon>linkedin</mat-icon>
           </a>
-          <a href="https://github.com/" target="_blank" aria-label="GitHub">
+          <a
+            href="https://github.com/rajkumarkatta19"
+            target="_blank"
+            aria-label="GitHub"
+          >
             <mat-icon>code</mat-icon>
           </a>
           <a [href]="'mailto:' + contact.email" aria-label="Email">
@@ -36,7 +44,7 @@
         </div>
       </div>
     </div>
-    
+
     <div class="copyright">
       <p>&copy; {{ currentYear }} Rajkumar Katta. All rights reserved.</p>
     </div>
