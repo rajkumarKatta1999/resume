@@ -1,31 +1,50 @@
 <mat-toolbar color="primary" class="header-toolbar">
   <div class="container">
     <a routerLink="/" class="logo">Rajkumar Katta</a>
-    
+
     <!-- Desktop Navigation -->
     <nav class="desktop-nav">
-      <a mat-button routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+      <a
+        mat-button
+        routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Home</a
+      >
       <a mat-button routerLink="/about" routerLinkActive="active">About</a>
       <a mat-button routerLink="/skills" routerLinkActive="active">Skills</a>
-      <a mat-button routerLink="/experience" routerLinkActive="active">Experience</a>
-      <a mat-button routerLink="/projects" routerLinkActive="active">Projects</a>
-      <a mat-button routerLink="/education" routerLinkActive="active">Education</a>
+      <a mat-button routerLink="/experience" routerLinkActive="active"
+        >Experience</a
+      >
+      <a mat-button routerLink="/projects" routerLinkActive="active"
+        >Projects</a
+      >
+      <a mat-button routerLink="/education" routerLinkActive="active"
+        >Education</a
+      >
       <a mat-button routerLink="/contact" routerLinkActive="active">Contact</a>
-      
+
       <button mat-icon-button (click)="toggleTheme()" class="theme-toggle">
-        <mat-icon>{{ isDarkTheme ? 'light_mode' : 'dark_mode' }}</mat-icon>
+        <mat-icon>{{ isDarkTheme ? "light_mode" : "dark_mode" }}</mat-icon>
       </button>
-      
-      <a mat-raised-button color="accent" href="assets/resume/resume.pdf" target="_blank" download="Rajkumar_Katta_Resume.pdf" class="download-btn">
+
+      <a
+        mat-raised-button
+        color="accent"
+        href="assets/resume/resume_new.pdf"
+        target="_blank"
+        download="Rajkumar_Katta_Resume.pdf"
+        class="download-btn"
+      >
         <mat-icon>download</mat-icon> Resume
       </a>
     </nav>
-    
+
     <!-- Mobile Navigation -->
     <button mat-icon-button [matMenuTriggerFor]="menu" class="mobile-menu-btn">
       <mat-icon>menu</mat-icon>
     </button>
-    
+
     <mat-menu #menu="matMenu">
       <a mat-menu-item routerLink="/">Home</a>
       <a mat-menu-item routerLink="/about">About</a>
@@ -35,10 +54,15 @@
       <a mat-menu-item routerLink="/education">Education</a>
       <a mat-menu-item routerLink="/contact">Contact</a>
       <button mat-menu-item (click)="toggleTheme()">
-        <mat-icon>{{ isDarkTheme ? 'light_mode' : 'dark_mode' }}</mat-icon>
-        {{ isDarkTheme ? 'Light Mode' : 'Dark Mode' }}
+        <mat-icon>{{ isDarkTheme ? "light_mode" : "dark_mode" }}</mat-icon>
+        {{ isDarkTheme ? "Light Mode" : "Dark Mode" }}
       </button>
-      <a mat-menu-item href="assets/resume/resume.pdf" target="_blank" download="Rajkumar_Katta_Resume.pdf">
+      <a
+        mat-menu-item
+        href="assets/resume/resume_new.pdf"
+        target="_blank"
+        download="Rajkumar_Katta_Resume.pdf"
+      >
         <mat-icon>download</mat-icon> Download Resume
       </a>
     </mat-menu>

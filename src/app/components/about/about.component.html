@@ -1,20 +1,20 @@
 <section class="section about-section">
   <div class="container">
     <h2 class="section-title">About Me</h2>
-    
+
     <div class="about-content">
       <div class="about-image">
-        <img src="assets/images/rajkumarIMG.png" alt="Rajkumar Katta">
+        <img src="assets/images/rajkumarIMG.png" alt="Rajkumar Katta" />
       </div>
-      
+
       <div class="about-text">
         <h3>Hello, I'm {{ personalInfo.name }}</h3>
         <h4>{{ personalInfo.title }}</h4>
-        
+
         <p class="about-description">
           {{ personalInfo.about }}
         </p>
-        
+
         <div class="about-details">
           <div class="detail-item">
             <strong>Name:</strong> {{ personalInfo.name }}
@@ -22,13 +22,17 @@
           <div class="detail-item">
             <strong>Email:</strong> rajkumar.katta1920&#64;gmail.com
           </div>
-          <div class="detail-item">
-            <strong>Location:</strong> Pune, India
-          </div>
+          <div class="detail-item"><strong>Location:</strong> Pune, India</div>
         </div>
-        
+
         <div class="about-actions">
-          <a mat-raised-button color="primary" href="assets/resume/resume.pdf" target="_blank" download="Rajkumar_Katta_Resume.pdf">
+          <a
+            mat-raised-button
+            color="primary"
+            href="assets/resume/resume_new.pdf"
+            target="_blank"
+            download="Rajkumar_Katta_Resume.pdf"
+          >
             <mat-icon>download</mat-icon> Download Resume
           </a>
           <a mat-raised-button color="accent" routerLink="/contact">
@@ -37,7 +41,7 @@
         </div>
       </div>
     </div>
-    
+
     <!-- Quick Access Navigation Section -->
     <div class="quick-access-nav">
       <h3 class="quick-access-title">Quick Navigation</h3>
